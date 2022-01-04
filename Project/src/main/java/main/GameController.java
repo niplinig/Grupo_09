@@ -3,11 +3,14 @@ package main;
 import game.Square;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import match.MatchPCvPC;
 import players.ComputerPlayer;
 
 public class GameController implements Initializable {
@@ -34,6 +37,29 @@ public class GameController implements Initializable {
         if (App.match.getFirst() instanceof ComputerPlayer) {
             App.match.getFirst().makeMove();
         }
+
+        if (App.match instanceof MatchPCvPC) {
+            Thread computerAI = createComputerAI();
+            computerAI.setDaemon(true);
+            computerAI.start();
+        }
+
+    }
+
+    public Thread createComputerAI() {
+        Thread computerAI = new Thread(() -> {
+            while (true) {
+                try {
+                    TimeUnit.SECONDS.sleep(2);
+                    Platform.runLater(() -> {
+                        App.match.getActivePlayer().makeMove();
+                    });
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        return computerAI;
     }
 
     public GridPane createGridPane() {

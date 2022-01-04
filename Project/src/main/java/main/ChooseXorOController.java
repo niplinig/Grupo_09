@@ -24,7 +24,7 @@ public class ChooseXorOController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        App.match.setSignManger(new SignManager("X", "O"));
+        App.match.setSignManger(new SignManager());
         txtTitle.setText("Choose " + App.match.getFirst().getName() + " sign");
         bttn1.setText(App.match.getSign());
         bttn2.setText(App.match.getSign());

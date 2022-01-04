@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import main.App;
+import match.MatchPCvPC;
 import players.ComputerPlayer;
 import players.Player;
 
@@ -19,6 +20,10 @@ public class Square extends Label {
         this.addEventHandler(MouseEvent.MOUSE_CLICKED, onClick());
         this.addEventHandler(MouseEvent.MOUSE_ENTERED, onEntered());
         this.addEventHandler(MouseEvent.MOUSE_EXITED, onExited());
+    }
+
+    public boolean isPCvPCMatch() {
+        return App.match instanceof MatchPCvPC;
     }
 
     public void formatSquare() {
@@ -76,7 +81,7 @@ public class Square extends Label {
 
     public EventHandler<MouseEvent> onClick() {
         return (MouseEvent t) -> {
-            if (!this.isDisable()) {
+            if (!this.isDisable() && !isPCvPCMatch()) {
                 click();
             }
         };
@@ -84,7 +89,7 @@ public class Square extends Label {
 
     public EventHandler<MouseEvent> onEntered() {
         return (MouseEvent t) -> {
-            if (!this.isDisable()) {
+            if (!this.isDisable() && !isPCvPCMatch()) {
                 this.setText(App.match.getActivePlayer().getSign());
                 this.setOpacity(0.5);
             }
@@ -93,7 +98,7 @@ public class Square extends Label {
 
     public EventHandler<MouseEvent> onExited() {
         return (MouseEvent t) -> {
-            if (!this.isDisable()) {
+            if (!this.isDisable() && !isPCvPCMatch()) {
                 this.setText("");
                 this.setOpacity(1);
             }

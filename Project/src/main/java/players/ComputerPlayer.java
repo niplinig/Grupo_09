@@ -2,9 +2,7 @@ package players;
 
 import game.Board;
 import game.Square;
-import java.io.IOException;
 import main.App;
-import match.Match;
 
 public class ComputerPlayer implements Player {
 

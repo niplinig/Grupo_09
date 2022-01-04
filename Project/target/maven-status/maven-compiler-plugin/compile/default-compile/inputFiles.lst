@@ -1,8 +1,8 @@
 /home/fedora/NetBeansProjects/Project/src/main/java/main/App.java
+/home/fedora/NetBeansProjects/Project/src/main/java/game/Board.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/BaseController.java
 /home/fedora/NetBeansProjects/Project/src/main/java/signs/SignManager.java
 /home/fedora/NetBeansProjects/Project/src/main/java/match/MatchPvP.java
-/home/fedora/NetBeansProjects/Project/src/main/java/TDAs/Board.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/ChooseWhoStartsController.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/GameController.java
 /home/fedora/NetBeansProjects/Project/src/main/java/players/Player.java

@@ -8,8 +8,8 @@ public class SignManager {
     Deque<String> signQueue = new LinkedList<>();
 
     public SignManager() {
-        signQueue.addFirst("x");
-        signQueue.addLast("o");
+        signQueue.addFirst("X");
+        signQueue.addLast("O");
     }
 
     public SignManager(String firstSign, String secondSign) {
