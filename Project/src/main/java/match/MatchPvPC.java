@@ -1,19 +1,19 @@
 package match;
 
-import TDAs.Board;
+import game.Board;
 import players.ComputerPlayer;
 import players.HumanPlayer;
 import players.Player;
 import signs.SignManager;
 
-public class MatchPvE implements Match {
+public class MatchPvPC implements Match {
 
     private Player player1;
     private Player player2;
     private SignManager signManager;
     private Board board;
 
-    public MatchPvE() {
+    public MatchPvPC() {
         board = new Board();
         player1 = new HumanPlayer();
         player2 = new ComputerPlayer();

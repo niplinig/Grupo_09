@@ -1,6 +1,6 @@
 package players;
 
-import TDAs.Board;
+import game.Board;
 import game.Square;
 import java.io.IOException;
 import main.App;
@@ -38,6 +38,20 @@ public class ComputerPlayer implements Player {
             square.checkWin(board, this);
             square.checkDraw(board);
             App.match.swapTurn();
+        } else {
+            fillLastEmptySquare(this, board);
+        }
+    }
+
+    public void fillLastEmptySquare(Player ComputerPlayer, Board board) {
+        for (Square lastSquare : board.getArray()) {
+            if (lastSquare.isEmpty()) {
+                lastSquare.placeMark(ComputerPlayer);
+                lastSquare.checkWin(board, ComputerPlayer);
+                lastSquare.checkDraw(board);
+                App.match.swapTurn();
+                break;
+            }
         }
     }
 

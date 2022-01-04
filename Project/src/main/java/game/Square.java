@@ -1,6 +1,5 @@
 package game;
 
-import TDAs.Board;
 import java.io.IOException;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -60,24 +59,26 @@ public class Square extends Label {
     }
 
     public void click() {
-        if (!this.isDisable()) {
-            Board board = App.match.getBoard();
-            Player activePlayer = App.match.getActivePlayer();
-            placeMark(activePlayer);
-            checkWin(board, activePlayer);
-            checkDraw(board);
-            App.match.swapTurn();
+        Board board = App.match.getBoard();
+        Player activePlayer = App.match.getActivePlayer();
+        placeMark(activePlayer);
+        checkWin(board, activePlayer);
+        checkDraw(board);
+        App.match.swapTurn();
+        ifIsComputerNextTurn();
+    }
 
-            if (App.match.getActivePlayer() instanceof ComputerPlayer) {
-                App.match.getActivePlayer().makeMove();
-            }
-
+    public void ifIsComputerNextTurn() {
+        if (App.match.getActivePlayer() instanceof ComputerPlayer) {
+            App.match.getActivePlayer().makeMove();
         }
     }
 
     public EventHandler<MouseEvent> onClick() {
         return (MouseEvent t) -> {
-            click();
+            if (!this.isDisable()) {
+                click();
+            }
         };
     }
 

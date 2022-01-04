@@ -1,7 +1,7 @@
 package main;
 
-import match.MatchEvE;
-import match.MatchPvE;
+import match.MatchPCvPC;
+import match.MatchPvPC;
 import match.MatchPvP;
 import java.io.IOException;
 import java.net.URL;
@@ -16,9 +16,9 @@ public class ChooseModeController implements Initializable {
     @FXML
     private Button bttnPvP;
     @FXML
-    private Button bttnPvE;
+    private Button bttnPvPC;
     @FXML
-    private Button bttnEvE;
+    private Button bttnPCvPC;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -31,14 +31,14 @@ public class ChooseModeController implements Initializable {
     }
 
     @FXML
-    private void bttnPvEClicked(MouseEvent event) throws IOException {
-        App.match = new MatchPvE();
+    private void bttnPvPCClicked(MouseEvent event) throws IOException {
+        App.match = new MatchPvPC();
         App.setRoot("chooseWhoStarts");
     }
 
     @FXML
-    private void bttnEvEClicked(MouseEvent event) throws IOException {
-        App.match = new MatchEvE();
+    private void bttnPCvPCClicked(MouseEvent event) throws IOException {
+        App.match = new MatchPCvPC();
         App.setRoot("chooseWhoStarts");
     }
 

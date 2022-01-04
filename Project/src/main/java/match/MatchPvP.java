@@ -1,6 +1,6 @@
 package match;
 
-import TDAs.Board;
+import game.Board;
 import players.HumanPlayer;
 import players.Player;
 import signs.SignManager;

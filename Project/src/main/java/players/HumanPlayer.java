@@ -30,7 +30,6 @@ public class HumanPlayer implements Player {
 
     @Override
     public void makeMove() {
-        System.out.println(this.getInfo() + " has move");
     }
 
     /*

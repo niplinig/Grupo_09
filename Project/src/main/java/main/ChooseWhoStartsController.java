@@ -1,14 +1,13 @@
 package main;
 
-import match.MatchEvE;
-import match.MatchPvE;
+import match.MatchPCvPC;
+import match.MatchPvPC;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
@@ -21,8 +20,8 @@ public class ChooseWhoStartsController implements Initializable {
     @FXML
     private Button bttnPlayer2;
 
-    private final boolean isMatchEvE = App.match instanceof MatchEvE;
-    private final boolean isMatchPvE = App.match instanceof MatchPvE;
+    private final boolean isMatchEvE = App.match instanceof MatchPCvPC;
+    private final boolean isMatchPvE = App.match instanceof MatchPvPC;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

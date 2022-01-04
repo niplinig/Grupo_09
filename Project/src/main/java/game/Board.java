@@ -1,6 +1,8 @@
-package TDAs;
+package game;
 
+import TDAs.Tree;
 import game.Square;
+import main.App;
 import players.Player;
 
 public class Board {
@@ -293,8 +295,8 @@ public class Board {
             return null;
         }
         int position = 0;
-        for (Tree<Board> tree : firstStates.getChildren()) {
-            Board board = tree.getRootContent();
+        for (Tree<Board> child : firstStates.getChildren()) {
+            Board board = child.getRootContent();
             for (int i = 0; i < board.array.length; i++) {
                 if (board.array[position].isEmpty()) {
                     board.array[position].placeMark(activePlayer);
@@ -307,6 +309,9 @@ public class Board {
         return firstStates;
     }
 
+    /*
+    Paso 2
+     */
     public Tree<Board> generateSecondStates(Player activePlayer, Player deactivePlayer) {
         Tree<Board> secondStates = generateStates(activePlayer);
         if (secondStates == null) {
@@ -314,6 +319,9 @@ public class Board {
         }
         for (Tree<Board> child : secondStates.getChildren()) {
             Tree<Board> tree = child.getRootContent().generateStates(deactivePlayer);
+            if (tree == null) {
+                return null;
+            }
             for (Tree<Board> grantChild : tree.getChildren()) {
                 grantChild.getRootContent().calculateBoardUtility(activePlayer, deactivePlayer);
                 child.addChild(grantChild);
@@ -322,6 +330,9 @@ public class Board {
         return secondStates;
     }
 
+    /*
+    Paso 3
+     */
     public Tree<Board> calculateMinOfGrantChilds(Player activePlayer, Player deactivePlayer) {
         Tree<Board> treeWithMins = generateSecondStates(activePlayer, deactivePlayer);
         if (treeWithMins == null) {
@@ -340,6 +351,9 @@ public class Board {
         return treeWithMins;
     }
 
+    /*
+    Paso 4
+     */
     public Board calculateMaxOfChilds(Player activePlayer, Player deactivePlayer) {
         Tree<Board> treeWithMins = calculateMinOfGrantChilds(activePlayer, deactivePlayer);
         if (treeWithMins == null) {
@@ -370,9 +384,6 @@ public class Board {
         return null;
     }
 
-    /*
-    Paso 2
-     */
     @Override
     public String toString() {
         String boardInText = "";
@@ -469,37 +480,59 @@ public class Board {
     }
 
     public Square getSquare(int x, int y) {
-        if (x == 0) {
-            if (y == 0) {
-                return topLeft;
-            }
-            if (y == 1) {
-                return top;
-            }
-            if (y == 2) {
-                return topRight;
-            }
+        if (x == 0 && y < 3) {
+            return getRow1Square(y);
         }
-        if (x == 1) {
-            if (y == 0) {
-                return left;
-            }
-            if (y == 1) {
-                return center;
-            }
-            if (y == 2) {
-                return right;
-            }
+        if (x == 1 && y < 3) {
+            return getRow2Square(y);
         }
-        if (x == 2) {
-            if (y == 0) {
-                return bottomLeft;
-            }
-            if (y == 1) {
-                return bottom;
-            }
+        if (x == 2 && y < 3) {
+            return getRow3Square(y);
         }
-        return bottomRight;
+        return null;
+    }
+
+    public Square getRow1Square(int y) {
+        if (y == 0) {
+            return topLeft;
+        }
+        if (y == 1) {
+            return top;
+        }
+        if (y == 2) {
+            return topRight;
+        }
+        return null;
+    }
+
+    public Square getRow2Square(int y) {
+        if (y == 0) {
+            return left;
+        }
+        if (y == 1) {
+            return center;
+        }
+        if (y == 2) {
+            return right;
+        }
+        return null;
+    }
+
+    public Square getRow3Square(int y) {
+        if (y == 0) {
+            return bottomLeft;
+        }
+        if (y == 1) {
+            return bottom;
+        }
+        if (y == 2) {
+            return bottomRight;
+        }
+        return null;
+    }
+
+    public Square[] getArray() {
+        return array;
     }
 
     /*

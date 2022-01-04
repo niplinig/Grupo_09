@@ -6,15 +6,15 @@
 /home/fedora/NetBeansProjects/Project/src/main/java/main/ChooseWhoStartsController.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/GameController.java
 /home/fedora/NetBeansProjects/Project/src/main/java/players/Player.java
-/home/fedora/NetBeansProjects/Project/src/main/java/match/MatchEvE.java
 /home/fedora/NetBeansProjects/Project/src/main/java/TDAs/Tree.java
 /home/fedora/NetBeansProjects/Project/src/main/java/TDAs/NodeTree.java
 /home/fedora/NetBeansProjects/Project/src/main/java/players/HumanPlayer.java
+/home/fedora/NetBeansProjects/Project/src/main/java/match/MatchPCvPC.java
 /home/fedora/NetBeansProjects/Project/src/main/java/module-info.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/ChooseXorOController.java
-/home/fedora/NetBeansProjects/Project/src/main/java/match/MatchPvE.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/GameOverController.java
 /home/fedora/NetBeansProjects/Project/src/main/java/players/ComputerPlayer.java
 /home/fedora/NetBeansProjects/Project/src/main/java/game/Square.java
 /home/fedora/NetBeansProjects/Project/src/main/java/match/Match.java
+/home/fedora/NetBeansProjects/Project/src/main/java/match/MatchPvPC.java
 /home/fedora/NetBeansProjects/Project/src/main/java/main/ChooseModeController.java

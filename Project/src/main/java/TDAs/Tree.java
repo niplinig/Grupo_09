@@ -58,17 +58,4 @@ public class Tree<T> {
         return this.root.getChildren().get(index);
     }
 
-    @Override
-    public String toString() {
-        String s = this.getRoot().getContent().toString();
-        if (this.getChildren() != null) {
-            /*s += "\n----HIJOS----\n";
-            for(Tree<T> t: this.getChildren()){
-                s += t.getRoot().getContent().toString();
-            }
-            s += "\n-------------\n";*/
-        }
-        return s;
-    }
-
 }

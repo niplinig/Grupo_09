@@ -19,12 +19,12 @@
             <Font name="Montserrat Regular" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="bttnPvE" alignment="CENTER" maxHeight="70.0" maxWidth="200.0" minHeight="70.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#bttnPvEClicked" prefHeight="70.0" prefWidth="200.0" text="PvE" textAlignment="CENTER">
+      <Button fx:id="bttnPvPC" alignment="CENTER" maxHeight="70.0" maxWidth="200.0" minHeight="70.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#bttnPvPCClicked" prefHeight="70.0" prefWidth="200.0" text="PvPC" textAlignment="CENTER">
          <font>
             <Font name="Montserrat Regular" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="bttnEvE" alignment="CENTER" maxHeight="70.0" maxWidth="200.0" minHeight="70.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#bttnEvEClicked" prefHeight="70.0" prefWidth="200.0" text="EvE" textAlignment="CENTER">
+      <Button fx:id="bttnPCvPC" alignment="CENTER" maxHeight="70.0" maxWidth="200.0" minHeight="70.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#bttnPCvPCClicked" prefHeight="70.0" prefWidth="200.0" text="PCvPC" textAlignment="CENTER">
          <font>
             <Font name="Montserrat Regular" size="30.0" />
          </font>
