@@ -30,7 +30,20 @@ public class GameOverController implements Initializable {
         } else {
             txtWin.setText("Draw");
         }
-        vBox.getChildren().add(GameController.createGridPane());
+        vBox.getChildren().add(createGridPane());
+    }
+
+    public GridPane createGridPane() {
+        GridPane grid = new GridPane();
+        grid.setGridLinesVisible(true);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                Square square = App.getMatch().getBoard().getSquare(i, j);
+                square.setDisable(true);
+                grid.add(square, j, i);
+            }
+        }
+        return grid;
     }
 
     @FXML

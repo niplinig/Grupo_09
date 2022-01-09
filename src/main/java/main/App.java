@@ -18,9 +18,9 @@ public class App extends Application {
         scene = new Scene(loadFXML("base"));
         stage.setScene(scene);
         stage.show();
-        stage.setOnCloseRequest(event -> {
-            System.out.println("Stage is closing");
-        });
+//        stage.setOnCloseRequest(event -> {
+//            System.out.println("Stage is closing");
+//        });
     }
 
     public static void setRoot(String fxml) throws IOException {

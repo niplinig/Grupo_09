@@ -63,7 +63,7 @@ public class GameController implements Initializable {
         return computerAI;
     }
 
-    public static GridPane createGridPane() {
+    public GridPane createGridPane() {
         GridPane grid = new GridPane();
         grid.setGridLinesVisible(true);
         for (int i = 0; i < 3; i++) {
