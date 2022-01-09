@@ -1,5 +1,6 @@
 package main;
 
+import fashion.ThemeManager;
 import match.Match;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

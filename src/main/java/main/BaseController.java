@@ -12,6 +12,8 @@ public class BaseController implements Initializable {
 
     @FXML
     private Button bttnPlay;
+    @FXML
+    private Button btnOptions;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -20,6 +22,11 @@ public class BaseController implements Initializable {
     @FXML
     private void PlayClicked(MouseEvent event) throws IOException {
         App.setRoot("chooseMode");
+    }
+
+    @FXML
+    private void OptionsClicked(MouseEvent event) throws IOException {
+        App.setRoot("options");
     }
 
 }

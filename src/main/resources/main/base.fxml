@@ -17,5 +17,10 @@
             <Font name="Montserrat Regular" size="30.0" />
          </font>
       </Button>
+      <Button fx:id="btnOptions" alignment="CENTER" contentDisplay="CENTER" maxHeight="70.0" maxWidth="200.0" minHeight="70.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#OptionsClicked" prefHeight="70.0" prefWidth="200.0" text="Options" textAlignment="CENTER">
+         <font>
+            <Font name="Montserrat Regular" size="30.0" />
+         </font>
+      </Button>
    </children>
 </VBox>

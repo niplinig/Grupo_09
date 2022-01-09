@@ -5,16 +5,16 @@ import java.util.LinkedList;
 
 public class SignManager {
 
-    Deque<String> signQueue = new LinkedList<>();
+    LinkedList<String> signQueue = new LinkedList<>();
 
     public SignManager() {
-        signQueue.addFirst("X");
-        signQueue.addLast("O");
+        signQueue.add("X");
+        signQueue.add("O");
     }
 
     public SignManager(String firstSign, String secondSign) {
-        signQueue.addFirst(firstSign);
-        signQueue.addLast(secondSign);
+        signQueue.add(firstSign);
+        signQueue.add(secondSign);
     }
 
     public String getSign() {
