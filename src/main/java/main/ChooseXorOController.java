@@ -24,23 +24,23 @@ public class ChooseXorOController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        App.match.setSignManger(new SignManager());
-        txtTitle.setText("Choose " + App.match.getFirst().getName() + " sign");
-        bttn1.setText(App.match.getSign());
-        bttn2.setText(App.match.getSign());
+        App.getMatch().setSignManger(new SignManager());
+        txtTitle.setText("Choose " + App.getMatch().getFirst().getName() + " sign");
+        bttn1.setText(App.getMatch().getSign());
+        bttn2.setText(App.getMatch().getSign());
     }
 
     @FXML
     private void bttn1Clicked(MouseEvent event) throws IOException {
-        App.match.getFirst().setSign(bttn1.getText());
-        App.match.getSecond().setSign(bttn2.getText());
+        App.getMatch().getFirst().setSign(bttn1.getText());
+        App.getMatch().getSecond().setSign(bttn2.getText());
         App.setRoot("game");
     }
 
     @FXML
     private void bttn2Clicked(MouseEvent event) throws IOException {
-        App.match.getFirst().setSign(bttn2.getText());
-        App.match.getSecond().setSign(bttn1.getText());
+        App.getMatch().getFirst().setSign(bttn2.getText());
+        App.getMatch().getSecond().setSign(bttn1.getText());
         App.setRoot("game");
     }
 

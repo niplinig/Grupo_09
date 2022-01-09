@@ -26,19 +26,19 @@ public class ChooseModeController implements Initializable {
 
     @FXML
     private void bttnPvPClicked(MouseEvent event) throws IOException {
-        App.match = new MatchPvP();
+        App.setMatch(new MatchPvP());
         App.setRoot("chooseWhoStarts");
     }
 
     @FXML
     private void bttnPvPCClicked(MouseEvent event) throws IOException {
-        App.match = new MatchPvPC();
+        App.setMatch(new MatchPvPC());
         App.setRoot("chooseWhoStarts");
     }
 
     @FXML
     private void bttnPCvPCClicked(MouseEvent event) throws IOException {
-        App.match = new MatchPCvPC();
+        App.setMatch(new MatchPCvPC());
         App.setRoot("chooseWhoStarts");
     }
 

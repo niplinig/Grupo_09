@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
@@ -25,20 +26,20 @@ public class GameController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Set the text in the screen
-        player1Sign.setText(App.match.getPlayer1().getInfo());
-        player2Sign.setText(App.match.getPlayer2().getInfo());
+        player1Sign.setText(App.getMatch().getPlayer1().getInfo());
+        player2Sign.setText(App.getMatch().getPlayer2().getInfo());
 
         // Show the board
         vBox.getChildren().add(createGridPane());
 
         // Set the first player as active
-        App.match.getFirst().setActive(true);
+        App.getMatch().getFirst().setActive(true);
 
-        if (App.match.getFirst() instanceof ComputerPlayer) {
-            App.match.getFirst().makeMove();
+        if (App.getMatch().getFirst() instanceof ComputerPlayer) {
+            App.getMatch().getFirst().makeMove();
         }
 
-        if (App.match instanceof MatchPCvPC) {
+        if (App.getMatch() instanceof MatchPCvPC) {
             Thread computerAI = createComputerAI();
             computerAI.setDaemon(true);
             computerAI.start();
@@ -52,7 +53,7 @@ public class GameController implements Initializable {
                 try {
                     TimeUnit.SECONDS.sleep(2);
                     Platform.runLater(() -> {
-                        App.match.getActivePlayer().makeMove();
+                        App.getMatch().getActivePlayer().makeMove();
                     });
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
@@ -62,12 +63,12 @@ public class GameController implements Initializable {
         return computerAI;
     }
 
-    public GridPane createGridPane() {
+    public static GridPane createGridPane() {
         GridPane grid = new GridPane();
         grid.setGridLinesVisible(true);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                Square square = App.match.getBoard().getSquare(i, j);
+                Square square = App.getMatch().getBoard().getSquare(i, j);
                 grid.add(square, j, i);
             }
         }

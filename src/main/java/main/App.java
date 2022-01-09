@@ -11,13 +11,16 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
-    public static Match match;
+    private static Match match;
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("base"));
         stage.setScene(scene);
         stage.show();
+        stage.setOnCloseRequest(event -> {
+            System.out.println("Stage is closing");
+        });
     }
 
     public static void setRoot(String fxml) throws IOException {
@@ -32,4 +35,27 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    /*
+    Getters
+     */
+    public static Scene getScene() {
+        return scene;
+    }
+
+    public static Match getMatch() {
+        return match;
+    }
+
+    /*
+    Setters
+     */
+    public static void setScene(Scene scene) {
+        App.scene = scene;
+    }
+
+    public static void setMatch(Match match) {
+        App.match = match;
+    }
+
 }

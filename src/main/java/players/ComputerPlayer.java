@@ -29,13 +29,13 @@ public class ComputerPlayer implements Player {
 
     @Override
     public void makeMove() {
-        Board board = App.match.getBoard();
-        Square square = board.getMinimaxSquare(this, App.match.getOposingPlayer(this));
+        Board board = App.getMatch().getBoard();
+        Square square = board.getMinimaxSquare(this, App.getMatch().getOposingPlayer(this));
         if (square != null) {
             square.placeMark(this);
             square.checkWin(board, this);
             square.checkDraw(board);
-            App.match.swapTurn();
+            App.getMatch().swapTurn();
         }
     }
 

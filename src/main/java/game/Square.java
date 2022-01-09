@@ -23,7 +23,7 @@ public class Square extends Label {
     }
 
     public boolean isPCvPCMatch() {
-        return App.match instanceof MatchPCvPC;
+        return App.getMatch() instanceof MatchPCvPC;
     }
 
     public void formatSquare() {
@@ -44,7 +44,7 @@ public class Square extends Label {
 
     public void checkWin(Board board, Player activePlayer) {
         if (board.hasPlayerWin(activePlayer)) {
-            App.match.setWinner(activePlayer);
+            App.getMatch().setWinner(activePlayer);
             try {
                 App.setRoot("gameOver");
             } catch (IOException ex) {
@@ -64,18 +64,18 @@ public class Square extends Label {
     }
 
     public void click() {
-        Board board = App.match.getBoard();
-        Player activePlayer = App.match.getActivePlayer();
+        Board board = App.getMatch().getBoard();
+        Player activePlayer = App.getMatch().getActivePlayer();
         placeMark(activePlayer);
         checkWin(board, activePlayer);
         checkDraw(board);
-        App.match.swapTurn();
+        App.getMatch().swapTurn();
         ifIsComputerNextTurn();
     }
 
     public void ifIsComputerNextTurn() {
-        if (App.match.getActivePlayer() instanceof ComputerPlayer) {
-            App.match.getActivePlayer().makeMove();
+        if (App.getMatch().getActivePlayer() instanceof ComputerPlayer) {
+            App.getMatch().getActivePlayer().makeMove();
         }
     }
 
@@ -90,7 +90,7 @@ public class Square extends Label {
     public EventHandler<MouseEvent> onEntered() {
         return (MouseEvent t) -> {
             if (!this.isDisable() && !isPCvPCMatch()) {
-                this.setText(App.match.getActivePlayer().getSign());
+                this.setText(App.getMatch().getActivePlayer().getSign());
                 this.setOpacity(0.5);
             }
         };

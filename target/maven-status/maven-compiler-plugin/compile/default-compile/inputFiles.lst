@@ -1,20 +1,20 @@
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/match/MatchPvPC.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/match/Match.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/signs/SignManager.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/ChooseWhoStartsController.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/players/ComputerPlayer.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/match/MatchPCvPC.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/TDAs/NodeTree.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/match/MatchPvP.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/ChooseModeController.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/players/HumanPlayer.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/ChooseXorOController.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/GameController.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/BaseController.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/GameOverController.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/game/Square.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/players/Player.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/TDAs/Tree.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/game/Board.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/module-info.java
-/home/zorin/NetBeansProjects/Project-Segundo Parcial/src/main/java/main/App.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/TDAs/Tree.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/MatchPvP.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/GameOverController.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/players/HumanPlayer.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/BaseController.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/ChooseXorOController.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/Match.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/module-info.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/ChooseModeController.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/players/ComputerPlayer.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/App.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/TDAs/NodeTree.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/MatchPvPC.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/GameController.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/ChooseWhoStartsController.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/MatchPCvPC.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/game/Board.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/players/Player.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/game/Square.java
+/home/zorin/NetBeansProjects/TicTacToe/src/main/java/signs/SignManager.java
