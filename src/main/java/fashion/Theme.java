@@ -30,4 +30,8 @@ public class Theme {
         return " * " + name;
     }
 
+    public boolean isEmpty() {
+        return name.isBlank() && url.isBlank();
+    }
+
 }

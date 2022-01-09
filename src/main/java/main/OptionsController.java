@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 
@@ -18,7 +19,9 @@ public class OptionsController implements Initializable {
     @FXML
     private ComboBox<Theme> cbThemes;
     @FXML
-    private Button bttnMain;
+    private Label lblBack;
+    @FXML
+    private Button bttnApply;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -27,14 +30,16 @@ public class OptionsController implements Initializable {
     }
 
     @FXML
-    private void cbThemesSelected(ContextMenuEvent event) {
-        String themeSelected = getClass().getResource("/style/" + cbThemes.getValue().getUrl()).toExternalForm();
-        App.getScene().getStylesheets().add(themeSelected);
+    private void backClicked(MouseEvent event) throws IOException {
+        App.setRoot("base");
     }
 
     @FXML
-    private void mainClicked(MouseEvent event) throws IOException {
-        App.setRoot("base");
+    private void applyClicked(MouseEvent event) {
+        App.getScene().getStylesheets().clear();
+        String themeSelected = getClass().getResource("/styles/" + cbThemes.getValue().getUrl()).toExternalForm();
+        App.getScene().getStylesheets().add(themeSelected);
     }
+
 
 }

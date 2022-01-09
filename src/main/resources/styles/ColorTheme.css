@@ -4,6 +4,14 @@
     -fx-background-position: center center;
 }
 
+.label {
+    -fx-text-fill: white;
+}
+
+Text {
+    -fx-text-fill: white;
+}
+
 .button {
     -fx-text-fill: #006464;
     -fx-background-color: #DFB951;

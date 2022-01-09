@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
 public class ChooseModeController implements Initializable {
@@ -19,6 +20,8 @@ public class ChooseModeController implements Initializable {
     private Button bttnPvPC;
     @FXML
     private Button bttnPCvPC;
+    @FXML
+    private Label lblBack;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -40,6 +43,11 @@ public class ChooseModeController implements Initializable {
     private void bttnPCvPCClicked(MouseEvent event) throws IOException {
         App.setMatch(new MatchPCvPC());
         App.setRoot("chooseWhoStarts");
+    }
+
+    @FXML
+    private void backClicked(MouseEvent event) throws IOException {
+        App.setRoot("base");
     }
 
 }
