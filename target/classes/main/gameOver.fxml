@@ -7,7 +7,7 @@
 
 <VBox fx:id="vBox" alignment="CENTER" fillWidth="false" maxHeight="640.0" maxWidth="360.0" minHeight="640.0" minWidth="360.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="640.0" prefWidth="360.0" spacing="50.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.GameOverController">
    <children>
-      <Text fx:id="txtWin" layoutX="126.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Win">
+      <Text fx:id="txtWin" layoutX="126.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="You Win">
          <font>
             <Font name="Montserrat Regular" size="30.0" />
          </font>

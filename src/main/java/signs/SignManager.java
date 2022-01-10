@@ -1,6 +1,5 @@
 package signs;
 
-import java.util.Deque;
 import java.util.LinkedList;
 
 public class SignManager {

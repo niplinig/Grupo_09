@@ -1,0 +1,71 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 ene. 2022, 12:06:24
+    Author     : kevin
+*/
+.root {
+    -fx-background-image: url(/images/matrixBG.jpg);
+    -fx-background-size: 1000 800;
+    -fx-background-position: center center;
+    -fx-font-family: "Consolas";
+}
+
+.text-id {
+    -fx-font-family: "Consolas";
+    -fx-font-weight: bold;
+    -fx-font-smoothing-type: lcd;
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.button{
+    -fx-font-family: "Consolas";
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 30 0 30 0;
+    -fx-background-insets: 5 5 5 5;
+    -fx-effect: dropshadow(one-pass-box, darkgreen, 0.0, 0.0, 0.0, 10);
+    -fx-cursor: crosshair;
+}
+.button:hover{
+    -fx-background-color: #3e8e41;
+}
+
+.button:pressed{
+    -fx-background-color: #3e8e41;
+    -fx-translate-y: 5;
+    -fx-effect: dropshadow(one-pass-box, darkgreen, 0.0, 0.0, 0.0, 5);
+}
+
+.grid{
+    -fx-font-family: "Consolas";
+    -fx-font-size: 40;
+    -fx-background-color: #99ff99;
+    -fx-border-color: #00cc66;
+    -fx-border-style: dotted;
+    -fx-border-width: 5;
+}
+
+.combo-box {
+    -fx-font-size: 20;
+    -fx-background-radius: 0 15 0 15;
+    -fx-border-style: dotted;
+    -fx-border-color: #00cc66;
+    -fx-background-color: #99ff99;
+    -fx-border-width: 5;
+    -fx-cursor: crosshair;
+}
+
+.combo-box .list-cell{
+    -fx-background-color: #99ff99;
+}
+
+.combo-box .arrow{
+    -fx-background-color: #00cc66;
+}
+

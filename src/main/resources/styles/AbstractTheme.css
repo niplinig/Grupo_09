@@ -2,12 +2,60 @@
     -fx-background-image: url(/images/abstractBG.jpg);
     -fx-background-size: 450 800;
     -fx-background-position: center center;
+    -fx-font-family: "Ink Free";
+}
+
+.text-id {
+    -fx-font-family: "Ink Free";
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-fill: white;
 }
 
 .button {
-    -fx-text-fill: red;
-    -fx-background-color: lightcyan;
-    -fx-border-color: green;
-    -fx-border-radius: 5;
-    -fx-padding: 3 6 6 6;
+    -fx-font-family: "Ink Free";
+    -fx-font-size: 30;
+    -fx-text-fill: WHITE;
+    -fx-background-color: #F70F0F;
+    -fx-background-radius: 0 0 0 0;
+    -fx-background-insets: 1 1 1 1;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, darkred, 0.0, 0.0, 0.0, 10);
+
+}
+.button:hover{
+    -fx-background-color: #FA5050;
+}
+
+.button:pressed {
+    -fx-background-color: #FA5050;
+    -fx-translate-y: 5;
+    -fx-effect: dropshadow(one-pass-box, darkred, 0.0, 0.0, 0.0, 5);
+}
+
+.grid {
+    -fx-font-family: "Ink Free";
+    -fx-background-color: orange;
+    -fx-font-size: 40;
+    -fx-background-color: #ff6666;
+    -fx-border-color: red;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}
+
+.combo-box {
+    -fx-font-size: 20;
+    -fx-border-color: #ff3333;
+    -fx-background-color: #ff6666;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}
+
+.combo-box .list-cell{
+    -fx-background-color: #ff6666;
+}
+
+.combo-box .arrow{
+    -fx-background-color: red;
 }

@@ -33,7 +33,7 @@ public class Square extends Label {
         this.setMinSize(100.0, 100.0);
         this.setPrefSize(100.0, 100.0);
         this.setTextAlignment(TextAlignment.CENTER);
-        this.setFont(new Font(50.0));
+        this.getStyleClass().add("grid");
     }
 
     public void placeMark(Player activePlayer) {

@@ -13,12 +13,12 @@
             <Insets />
          </VBox.margin>
          <children>
-            <Text fx:id="player1Sign" strokeType="OUTSIDE" strokeWidth="0.0" text="Player" textAlignment="CENTER">
+            <Text fx:id="player1Sign" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Player" textAlignment="CENTER">
                <font>
                   <Font name="Montserrat Regular" size="20.0" />
                </font>
             </Text>
-            <Text fx:id="player2Sign" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer">
+            <Text fx:id="player2Sign" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Computer">
                <font>
                   <Font name="Montserrat Regular" size="20.0" />
                </font>

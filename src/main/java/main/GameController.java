@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
@@ -32,6 +31,7 @@ public class GameController implements Initializable {
         // Show the board
         vBox.getChildren().add(createGridPane());
 
+        
         // Set the first player as active
         App.getMatch().getFirst().setActive(true);
 
@@ -65,13 +65,15 @@ public class GameController implements Initializable {
 
     public GridPane createGridPane() {
         GridPane grid = new GridPane();
-        grid.setGridLinesVisible(true);
+//        grid.setGridLinesVisible(true);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 Square square = App.getMatch().getBoard().getSquare(i, j);
                 grid.add(square, j, i);
             }
+
         }
+        grid.getStyleClass().add("grid");
         return grid;
     }
 

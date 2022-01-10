@@ -35,7 +35,7 @@ public class GameOverController implements Initializable {
 
     public GridPane createGridPane() {
         GridPane grid = new GridPane();
-        grid.setGridLinesVisible(true);
+//        grid.setGridLinesVisible(true);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 Square square = App.getMatch().getBoard().getSquare(i, j);
@@ -43,12 +43,13 @@ public class GameOverController implements Initializable {
                 grid.add(square, j, i);
             }
         }
+        grid.getStyleClass().add("grid");
         return grid;
     }
 
     @FXML
     private void bttnPlayAgainClicked(MouseEvent event) throws IOException {
-        App.setRoot("base");
+        App.setRoot("chooseMode");
     }
 
 }

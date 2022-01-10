@@ -19,6 +19,8 @@ public class App extends Application {
         scene = new Scene(loadFXML("base"));
         stage.setScene(scene);
         stage.show();
+        String themeSelected = (getClass().getResource("/styles/default.css").toExternalForm());
+        scene.getStylesheets().add(themeSelected);
 //        stage.setOnCloseRequest(event -> {
 //            System.out.println("Stage is closing");
 //        });

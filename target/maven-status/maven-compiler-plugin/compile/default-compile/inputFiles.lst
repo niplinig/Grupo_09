@@ -1,23 +1,23 @@
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/TDAs/Tree.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/MatchPvP.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/GameOverController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/players/HumanPlayer.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/BaseController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/ChooseXorOController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/Match.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/module-info.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/ChooseModeController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/players/ComputerPlayer.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/App.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/TDAs/NodeTree.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/MatchPvPC.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/GameController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/ChooseWhoStartsController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/match/MatchPCvPC.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/game/Board.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/fashion/Theme.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/players/Player.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/fashion/ThemeManager.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/game/Square.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/main/OptionsController.java
-/home/zorin/NetBeansProjects/TicTacToe/src/main/java/signs/SignManager.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\fashion\Theme.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\module-info.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\ChooseModeController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\ChooseXorOController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\players\Player.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\GameOverController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\OptionsController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\App.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\players\ComputerPlayer.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\BaseController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\players\HumanPlayer.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\match\MatchPvPC.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\match\Match.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\TDAs\Tree.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\GameController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\game\Square.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\TDAs\NodeTree.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\match\MatchPCvPC.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\match\MatchPvP.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\main\ChooseWhoStartsController.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\game\Board.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\fashion\ThemeManager.java
+C:\Users\kevin\Desktop\nicolas ttt\TicTacToe\src\main\java\signs\SignManager.java

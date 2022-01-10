@@ -7,13 +7,14 @@ public class ThemeManager {
     public LinkedList<Theme> themes = new LinkedList<>();
 
     public ThemeManager() {
-        themes.add(new Theme("Default Theme", "DefaultTheme.css"));
-        themes.add(new Theme("Color Theme", "ColorTheme.css"));
-        themes.add(new Theme("Abstract Theme", "AbstractTheme.css"));
+        themes.add(new Theme("Color", "ColorTheme.css"));
+        themes.add(new Theme("Abstract", "AbstractTheme.css"));
+        themes.add(new Theme("Hacker", "HackerTheme.css"));
     }
 
     public LinkedList<Theme> getThemes() {
         return themes;
     }
 
+    
 }
