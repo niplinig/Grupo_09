@@ -24,6 +24,9 @@ public class GameController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // Set match finish false
+        App.getMatch().setMatchFinished(false);
+
         // Set the text in the screen
         player1Sign.setText(App.getMatch().getPlayer1().getInfo());
         player2Sign.setText(App.getMatch().getPlayer2().getInfo());
@@ -31,7 +34,6 @@ public class GameController implements Initializable {
         // Show the board
         vBox.getChildren().add(createGridPane());
 
-        
         // Set the first player as active
         App.getMatch().getFirst().setActive(true);
 
@@ -49,7 +51,7 @@ public class GameController implements Initializable {
 
     public Thread createComputerAI() {
         Thread computerAI = new Thread(() -> {
-            while (true) {
+            while (!App.getMatch().hasMatchFinished()) {
                 try {
                     TimeUnit.SECONDS.sleep(2);
                     Platform.runLater(() -> {

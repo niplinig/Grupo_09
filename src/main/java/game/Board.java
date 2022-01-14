@@ -2,7 +2,9 @@ package game;
 
 import TDAs.Tree;
 import game.Square;
-import main.App;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Random;
 import players.Player;
 
 public class Board {
@@ -299,6 +301,7 @@ public class Board {
      */
     public Board calculateMaxOfChilds(Player activePlayer, Player deactivePlayer) {
         Tree<Board> treeWithMins = calculateMinOfGrantChilds(activePlayer, deactivePlayer);
+        LinkedList<Board> sameUtilityBoards = new LinkedList<>();
         if (treeWithMins == null) {
             return null;
         }
@@ -310,9 +313,13 @@ public class Board {
             Board childBoard = child.getRootContent();
             if (childBoard.utility > maxBoard.utility) {
                 maxBoard = childBoard;
+            } else if (childBoard.utility == maxBoard.utility) {
+                sameUtilityBoards.add(childBoard);
             }
         }
-        return maxBoard;
+        Random random = new Random();
+        int rdnumber = random.nextInt(sameUtilityBoards.size());
+        return sameUtilityBoards.get(rdnumber);
     }
 
     public Square getMinimaxSquare(Player activePlayer, Player deactivePlayer) {
@@ -385,6 +392,13 @@ public class Board {
     /*
     Getters
      */
+    private Comparator<Board> getComparator() {
+        Comparator<Board> comparator = (Board b1, Board b2) -> {
+            return b1.getUtility() - b2.getUtility();
+        };
+        return comparator;
+    }
+
     public int getUtility() {
         return utility;
     }

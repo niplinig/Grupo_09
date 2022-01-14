@@ -11,6 +11,7 @@ public class MatchPvP implements Match {
     private Player player2;
     private SignManager signManager;
     private Board board;
+    private boolean matchFinished;
 
     public MatchPvP() {
         board = new Board();
@@ -89,6 +90,11 @@ public class MatchPvP implements Match {
         return (player1.equals(player)) ? player2 : player1;
     }
 
+    @Override
+    public boolean hasMatchFinished() {
+        return matchFinished;
+    }
+
     /*
     Setters
      */
@@ -115,5 +121,10 @@ public class MatchPvP implements Match {
     @Override
     public void setWinner(Player player) {
         player.setWin(true);
+    }
+
+    @Override
+    public void setMatchFinished(boolean matchFinished) {
+        this.matchFinished = matchFinished;
     }
 }

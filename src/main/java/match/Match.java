@@ -31,6 +31,8 @@ public interface Match {
 
     public Player getOposingPlayer(Player player);
 
+    public boolean hasMatchFinished();
+
     /*
     Setters
      */
@@ -43,5 +45,7 @@ public interface Match {
     public void setBoard(Board board);
 
     public void setWinner(Player player);
+
+    public void setMatchFinished(boolean matchFinished);
 
 }

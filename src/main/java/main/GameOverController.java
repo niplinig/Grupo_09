@@ -24,6 +24,9 @@ public class GameOverController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // Set Match as finished
+        App.getMatch().setMatchFinished(true);
+
         Player winner = App.getMatch().getWinner();
         if (winner != null) {
             txtWin.setText(winner.getInfo() + " Wins");
