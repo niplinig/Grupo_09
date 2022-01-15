@@ -1,7 +1,6 @@
 package turns;
 
 import game.Board;
-import javafx.scene.layout.GridPane;
 import players.Player;
 
 public class Turn {

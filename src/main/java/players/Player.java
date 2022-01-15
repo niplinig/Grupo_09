@@ -1,38 +1,89 @@
 package players;
 
-import java.util.LinkedList;
+import game.Board;
+import game.Square;
+import main.App;
 
-public interface Player {
+public abstract class Player {
 
-    public boolean equals(Player player);
+    private String name, sign;
+    private boolean first, active, winner = false;
 
-    public void makeMove();
+    public Player() {
+        this(null, null);
+    }
+
+    public Player(String name) {
+        this(name, null);
+    }
+
+    public Player(String name, String sign) {
+        this.name = name;
+        this.sign = sign;
+    }
+
+    public boolean equals(Player player) {
+        return this.getSign().equals(player.getSign());
+    }
+
+    public void makeMove() {
+        Board board = App.getMatch().getBoard();
+        Square square = board.getMinimaxSquare(this, App.getMatch().getOposingPlayer(this));
+        if (square != null) {
+            square.placeMark(this);
+            square.checkWin(board, this);
+            square.checkDraw(board);
+            App.getMatch().swapTurn();
+        }
+    }
 
     /*
     Getters
      */
-    public String getName();
+    public String getName() {
+        return name;
+    }
 
-    public String getSign();
+    public String getSign() {
+        return sign;
+    }
 
-    public boolean isFirst();
+    public boolean isFirst() {
+        return first;
+    }
 
-    public String getInfo();
+    public String getInfo() {
+        return name + ": " + sign;
+    }
 
-    public boolean isActive();
+    public boolean isActive() {
+        return active;
+    }
 
-    public boolean hasWin();
+    public boolean hasWin() {
+        return winner;
+    }
 
     /*
     Setters
      */
-    public void setName(String name);
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void setSign(String sign);
+    public void setSign(String sign) {
+        this.sign = sign;
+    }
 
-    public void setFirst(boolean first);
+    public void setFirst(boolean first) {
+        this.first = first;
+    }
 
-    public void setActive(boolean active);
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
-    public void setWin(boolean win);
+    public void setWin(boolean win) {
+        this.winner = win;
+    }
 }

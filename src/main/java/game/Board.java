@@ -317,6 +317,7 @@ public class Board {
                 sameUtilityBoards.add(childBoard);
             }
         }
+        sameUtilityBoards.add(maxBoard);
         Random random = new Random();
         int rdnumber = random.nextInt(sameUtilityBoards.size());
         return sameUtilityBoards.get(rdnumber);
