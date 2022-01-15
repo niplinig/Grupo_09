@@ -12,6 +12,7 @@ public class App extends Application {
 
     private static Scene scene;
     private static Match match;
+    public static Thread computerAI;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -49,6 +50,10 @@ public class App extends Application {
         return match;
     }
 
+    public static Thread getComputerAI() {
+        return computerAI;
+    }
+
     /*
     Setters
      */
@@ -58,6 +63,10 @@ public class App extends Application {
 
     public static void setMatch(Match match) {
         App.match = match;
+    }
+
+    public static void setComputerAI(Thread computerAI) {
+        App.computerAI = computerAI;
     }
 
 }

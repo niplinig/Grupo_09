@@ -42,9 +42,9 @@ public class GameController implements Initializable {
         }
 
         if (App.getMatch() instanceof MatchPCvPC) {
-            Thread computerAI = createComputerAI();
-            computerAI.setDaemon(true);
-            computerAI.start();
+            App.setComputerAI(createComputerAI());
+            App.getComputerAI().setDaemon(true);
+            App.getComputerAI().start();
         }
 
     }

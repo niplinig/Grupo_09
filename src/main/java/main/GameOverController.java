@@ -27,6 +27,9 @@ public class GameOverController implements Initializable {
         // Set Match as finished
         App.getMatch().setMatchFinished(true);
 
+        // Stopping the thread
+        App.setComputerAI(null);
+
         Player winner = App.getMatch().getWinner();
         if (winner != null) {
             txtWin.setText(winner.getInfo() + " Wins");
