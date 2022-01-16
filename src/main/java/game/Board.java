@@ -1,5 +1,4 @@
 package game;
-
 import TDAs.Tree;
 import game.Square;
 import java.util.Comparator;
