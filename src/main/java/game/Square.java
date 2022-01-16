@@ -72,6 +72,7 @@ public class Square extends Label {
         checkDraw(board);
         App.getMatch().swapTurn();
         ifIsComputerNextTurn();
+
     }
 
     public void ifIsComputerNextTurn() {

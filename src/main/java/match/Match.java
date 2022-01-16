@@ -3,6 +3,7 @@ package match;
 import game.Board;
 import players.Player;
 import signs.SignManager;
+import turns.TurnManager;
 
 public abstract class Match {
 
@@ -11,10 +12,12 @@ public abstract class Match {
     protected SignManager signManager;
     protected Board board;
     protected boolean matchFinished;
+    protected TurnManager turnManager;
 
     public Match() {
         board = new Board();
         signManager = new SignManager();
+        turnManager = new TurnManager();
     }
 
     public void swapTurn() {
@@ -25,6 +28,10 @@ public abstract class Match {
             player1.setActive(true);
             player2.setActive(false);
         }
+    }
+
+    public void addTurn() {
+        turnManager.addTurn(player1, board);
     }
 
     /*

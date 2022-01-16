@@ -21,6 +21,7 @@ public class App extends Application {
         stage.show();
         String themeSelected = (getClass().getResource("/styles/default.css").toExternalForm());
         scene.getStylesheets().add(themeSelected);
+        stage.setResizable(false);
 //        stage.setOnCloseRequest(event -> {
 //            System.out.println("Stage is closing");
 //        });
