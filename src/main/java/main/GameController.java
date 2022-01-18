@@ -53,12 +53,11 @@ public class GameController implements Initializable {
         Thread computerAI = new Thread(() -> {
             while (!App.getMatch().hasMatchFinished()) {
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.MILLISECONDS.sleep(1200);
                     Platform.runLater(() -> {
                         App.getMatch().getActivePlayer().makeMove();
                     });
                 } catch (InterruptedException ex) {
-                    ex.printStackTrace();
                 }
             }
         });

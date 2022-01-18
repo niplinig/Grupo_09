@@ -1,14 +1,12 @@
 package game;
 
 import java.io.IOException;
-import javafx.animation.ScaleTransition;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.TextAlignment;
-import javafx.util.Duration;
 import main.App;
 import match.MatchPCvPC;
 import players.ComputerPlayer;
@@ -49,7 +47,6 @@ public class Square extends Label {
             try {
                 App.setRoot("gameOver");
             } catch (IOException ex) {
-                ex.printStackTrace();
             }
         }
     }
@@ -59,7 +56,6 @@ public class Square extends Label {
             try {
                 App.setRoot("gameOver");
             } catch (IOException ex) {
-                ex.printStackTrace();
             }
         }
     }
@@ -67,12 +63,13 @@ public class Square extends Label {
     public void click() {
         Board board = App.getMatch().getBoard();
         Player activePlayer = App.getMatch().getActivePlayer();
+        activePlayer.makeMove();
         placeMark(activePlayer);
         checkWin(board, activePlayer);
         checkDraw(board);
         App.getMatch().swapTurn();
         ifIsComputerNextTurn();
-
+        
     }
 
     public void ifIsComputerNextTurn() {

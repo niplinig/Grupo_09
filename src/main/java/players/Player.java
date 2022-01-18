@@ -26,16 +26,7 @@ public abstract class Player {
         return this.getSign().equals(player.getSign());
     }
 
-    public void makeMove() {
-        Board board = App.getMatch().getBoard();
-        Square square = board.getMinimaxSquare(this, App.getMatch().getOposingPlayer(this));
-        if (square != null) {
-            square.placeMark(this);
-            square.checkWin(board, this);
-            square.checkDraw(board);
-            App.getMatch().swapTurn();
-        }
-    }
+    public abstract void makeMove();
 
     /*
     Getters
